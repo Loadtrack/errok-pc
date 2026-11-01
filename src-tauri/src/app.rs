@@ -411,23 +411,25 @@ async fn refresh(app: &AppHandle, background: bool) -> Result<AppSnapshot, Strin
                     }
                 }
             }
-            let data = state.data.lock().unwrap_or_else(|poisoned| poisoned.into_inner());
+            let (available, fetched_at) = {
+                let data = state.data.lock().unwrap_or_else(|poisoned| poisoned.into_inner());
+                (data.omaep.available.clone(), data.omaep.day_fetched_at.clone())
+            };
             for date in [today, today + Duration::days(1)] {
                 let key = format_date(date);
-                if !data.omaep.available.contains_key(&key)
+                if !available.contains_key(&key)
                     && !fresh.as_ref().is_some_and(|fresh| fresh.dates.contains_key(&key))
                 {
                     continue;
                 }
                 let due = !initialized
-                    || data.omaep.day_fetched_at.get(&key).map_or(true, |last| {
+                    || fetched_at.get(&key).map_or(true, |last| {
                         now - *last >= Duration::seconds(OMAEP_DAY_MIN_INTERVAL_SECONDS)
                     });
                 if due {
                     targets.insert(date);
                 }
             }
-            drop(data);
             let mut responses = vec![];
             for date in targets {
                 let key = format_date(date);
@@ -526,12 +528,18 @@ async fn save_settings(app: AppHandle, settings: Settings) -> Result<AppSnapshot
     Ok(snapshot(&state))
 }
 
-#[tauri::command]
-fn get_cached_day(state: State<'_, AppState>, date: String) -> Result<Option<DayView>, String> {
+fn cached_day(state: &AppState, date: &str) -> Option<DayView> {
     let data = state.data.lock().unwrap_or_else(|poisoned| poisoned.into_inner());
     let settings = &data.settings;
-    let day = data.cache(settings.college).days.get(&date);
-    Ok(day.map(|day| project_day(day, &settings.groups, &settings.teachers)))
+    data.cache(settings.college)
+        .days
+        .get(date)
+        .map(|day| project_day(day, &settings.groups, &settings.teachers))
+}
+
+#[tauri::command]
+fn get_cached_day(state: State<'_, AppState>, date: String) -> Result<Option<DayView>, String> {
+    Ok(cached_day(&state, &date))
 }
 
 #[tauri::command]
@@ -541,7 +549,7 @@ async fn load_day(app: AppHandle, date: String) -> Result<Option<DayView>, Strin
     let _guard = state.network.lock().await;
     let now = Utc::now();
     if retry_is_pending(&state, now) {
-        return get_cached_day(state, date);
+        return Ok(cached_day(&state, &date));
     }
     let settings = state.data.lock().unwrap_or_else(|poisoned| poisoned.into_inner()).settings.clone();
     if !settings.onboarded {
@@ -599,7 +607,7 @@ async fn load_day(app: AppHandle, date: String) -> Result<Option<DayView>, Strin
             match state.client.omaep_day(parsed, etag.as_deref()).await {
                 Ok(Fetch::NotModified) => {
                     record_success(&state);
-                    get_cached_day(state, date)
+                    Ok(cached_day(&state, &date))
                 }
                 Ok(Fetch::Fresh { data: day, etag }) => {
                     let mut data = state.data.lock().unwrap_or_else(|poisoned| poisoned.into_inner());
