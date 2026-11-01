@@ -17,7 +17,7 @@
 
 ## Скачать и установить
 
-**[Скачать errok для ПК v0.1.0 для Windows](https://github.com/Loadtrack/errok-pc/releases/download/v0.1.0/errok%20%D0%B4%D0%BB%D1%8F%20%D0%9F%D0%9A_0.1.0_x64-setup.exe)**
+**[Скачать errok для ПК v0.1.0 для Windows](https://github.com/Loadtrack/errok-pc/releases/download/v0.1.0/errok-pc-v0.1.0-windows-x64-setup.exe)**
 
 1. Скачайте и запустите установщик.
 2. При первом запуске выберите колледж и нужные группы или преподавателей.
