@@ -65,7 +65,11 @@ mod tests {
             parse_date("05.12.2026").unwrap(),
         ];
         let ranges = ranges_for_dates(dates);
-        assert_eq!(ranges.len(), 3);
+        assert_eq!(ranges.len(), 2);
+        assert_eq!(ranges[0].from, parse_date("01.11.2026").unwrap());
+        assert_eq!(ranges[0].to, parse_date("16.11.2026").unwrap());
+        assert_eq!(ranges[1].from, parse_date("20.11.2026").unwrap());
+        assert_eq!(ranges[1].to, parse_date("05.12.2026").unwrap());
         assert!(ranges.iter().all(|range| (range.to - range.from).num_days() <= 15));
     }
 
