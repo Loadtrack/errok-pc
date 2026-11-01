@@ -1,6 +1,0 @@
-HTTP/1.1 304 Not Modified
-Server: nginx
-Date: Sun, 01 Nov 2026 16:52:09 GMT
-Connection: keep-alive
-ETag: "15e1-65f0905cec313"
-
