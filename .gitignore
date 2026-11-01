@@ -1,0 +1,11 @@
+node_modules/
+dist/
+src-tauri/target/
+*.log
+.DS_Store
+playwright-report/
+test-results/
+artifacts/
+__pycache__/
+*.pyc
+errok-pc-source.zip

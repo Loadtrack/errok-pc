@@ -1,0 +1,4564 @@
+{
+  "date": "02.11.2026",
+  "week": 1,
+  "day": "Понедельник",
+  "groups": [
+    {
+      "name": "Б-9.35",
+      "lessons": [
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Менеджмент",
+              "teacher": "Грабовецкий Д.С.",
+              "room": "423",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.04.03 Осн-вы предпр-ва и бизнес-план.",
+              "teacher": "Калинина В.С.",
+              "room": "317",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы философии",
+              "teacher": "Николина Д.В.",
+              "room": "401",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Б-9.36",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.04.03 Осн-вы предпр-ва и бизнес-план.",
+              "teacher": "Калинина В.С.",
+              "room": "209",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.04.03 Осн-вы предпр-ва и бизнес-план.",
+              "teacher": "Калинина В.С.",
+              "room": "209",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Менеджмент",
+              "teacher": "Грабовецкий Д.С.",
+              "room": "426",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы философии",
+              "teacher": "Николина Д.В.",
+              "room": "401",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Б-9.39",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час",
+              "teacher": "Гельцер А.Д.",
+              "room": "101",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Статистика",
+              "teacher": "Стороженко Т.А.",
+              "room": "411",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Налоги и налогообложение",
+              "teacher": "Мазур И.Е.",
+              "room": "407",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Б-9.40",
+      "lessons": [
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Экономика организации",
+              "teacher": "Стороженко Т.А.",
+              "room": "423",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы финансовой грамотности",
+              "teacher": "Рытова Т.А.",
+              "room": "305",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Б-9.41",
+      "lessons": [
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Экономика организации",
+              "teacher": "Стороженко Т.А.",
+              "room": "423",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы финансовой грамотности",
+              "teacher": "Рытова Т.А.",
+              "room": "305",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Б-9.42",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Галаган А.А.",
+              "room": "409",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Обществознание",
+              "teacher": "Галаган А.А.",
+              "room": "426",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Математика",
+              "teacher": "Зловидова И.А.",
+              "room": "221",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Максимова Т.С.",
+              "room": "спорт. зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Химия",
+              "teacher": "Бондаревская И.Н.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Б-9.43",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Максимова Т.С.",
+              "room": "109",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Обществознание",
+              "teacher": "Галаган А.А.",
+              "room": "426",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Антонова Ю.И.",
+              "room": "409",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Максимова Т.С.",
+              "room": "спорт. зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Химия",
+              "teacher": "Бондаревская И.Н.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Б5-2026",
+      "lessons": [
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "общие вопросы специфики трудоустройства обучающихся в составе студенческих отрядов",
+              "teacher": "Булышева Ю.В.",
+              "room": "102",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 6,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "общие вопросы специфики трудоустройства обучающихся в составе студенческих отрядов",
+              "teacher": "Булышева Ю.В.",
+              "room": "103",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Кон6-2026",
+      "lessons": [
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "приготовление, оформление и подготовка к реализации хлебобулочных изделий",
+              "teacher": "Гельцер А.Д.",
+              "room": "306",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Приготовление отделочных полуфабрикатов, фаршей, начинок ,используемых при приготовлении хлебобулочных,мучных кондитерских изделий",
+              "teacher": "Гельцер А.Д.",
+              "room": "120",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 6,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Приготовление отделочных полуфабрикатов, фаршей, начинок ,используемых при приготовлении хлебобулочных,мучных кондитерских изделий",
+              "teacher": "Гельцер А.Д.",
+              "room": "120",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Оф10-2026",
+      "lessons": [
+        {
+          "pair": 6,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Введение в гостинечное дело и ресторанный бизнес (Официант)",
+              "teacher": "Лемишева Е.Р.",
+              "room": "102",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Пек5-2026",
+      "lessons": [
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "приготовление, оформление и подготовка к реализации хлебобулочных изделий",
+              "teacher": "Бенгардт Н.А.",
+              "room": "229",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 6,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Приготовление отделочных полуфабрикатов, фаршей, начинок ,используемых при приготовлении хлебобулочных,мучных  изделий",
+              "teacher": "Бенгардт Н.А.",
+              "room": "учеб. цех",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Пов7-2026",
+      "lessons": [
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Приготовление, оформл.и подготовка к реализ. горячих блюд,кулин.изделий ,закусок разнооб. ассортимента",
+              "teacher": "Фунина Е.В.",
+              "room": "417",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Приготовление, оформл.и подготовка к реализ. горячих блюд,кулин.изделий ,закусок разнооб. ассортимента",
+              "teacher": "Фунина Е.В.",
+              "room": "109",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 6,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Приготовление, оформл.и подготовка к реализ. горячих блюд,кулин.изделий ,закусок разнооб. ассортимента",
+              "teacher": "Фунина Е.В.",
+              "room": "118",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-1.31",
+      "lessons": [
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "МДК.05.03 Тестирование информ. систем",
+              "teacher": "Стасюк В.С.",
+              "room": "303",
+              "changed": false
+            }
+          ]
+        },
+        {
+          "pair": 6,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "МДК.05.03 Тестирование информ. систем",
+              "teacher": "Стасюк В.С.",
+              "room": "303",
+              "changed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-1.39",
+      "lessons": [
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "Иност. (англ) язык в проф. деят.",
+              "teacher": "Спиридонова Ю.Ю.",
+              "room": "422",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.02.03 Математ. моделирование",
+              "teacher": "Алешкова Т.Н.",
+              "room": "203",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "Иност. (англ) язык в проф. деят.",
+              "teacher": "Спиридонова Ю.Ю.",
+              "room": "108",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.19",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час",
+              "teacher": "Куликова М.Е.",
+              "room": "301",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.07.01 Управ. и автоматиз. баз данных",
+              "teacher": "Саютин В.Н.",
+              "room": "322",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.03.01 Моделир. и анализ прог. обеспечения",
+              "teacher": "Мельник Д.В.",
+              "room": "322",
+              "changed": false,
+              "type": "Тек. аттест."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.20",
+      "lessons": [
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "МДК.05.03 Тестирование информ. систем",
+              "teacher": "Стасюк В.С.",
+              "room": "303",
+              "changed": false
+            }
+          ]
+        },
+        {
+          "pair": 6,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "МДК.05.03 Тестирование информ. систем",
+              "teacher": "Стасюк В.С.",
+              "room": "303",
+              "changed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.21",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "МДК.03.01 Моделир. и анализ прог. обеспечения",
+              "teacher": "Мельник Д.В.",
+              "room": "317",
+              "changed": false,
+              "type": "Тек. ат."
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы предприн-ва и фин. грамотности",
+              "teacher": "Поспелова А.В.",
+              "room": "421",
+              "changed": false,
+              "type": "Тек. аттест."
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "МДК.05.03 Тестирование информ. систем",
+              "teacher": "Стасюк В.С.",
+              "room": "303",
+              "changed": false
+            },
+            {
+              "pg": 2,
+              "discipline": "МДК.05.03 Тестирование информ. систем",
+              "teacher": "Скрипник М.А.",
+              "room": "312",
+              "changed": false
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "МДК.06.04 Интеллект. системы и технологии",
+              "teacher": "Стекленев М.В.",
+              "room": "304",
+              "changed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.22",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "МДК.03.01 Моделир. и анализ прог. обеспечения",
+              "teacher": "Мельник Д.В.",
+              "room": "317",
+              "changed": false,
+              "type": "Тек. ат."
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы предприн-ва и фин. грамотности",
+              "teacher": "Поспелова А.В.",
+              "room": "421",
+              "changed": false,
+              "type": "Тек. аттест."
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "МДК.05.03 Тестирование информ. систем",
+              "teacher": "Стасюк В.С.",
+              "room": "303",
+              "changed": false
+            },
+            {
+              "pg": 2,
+              "discipline": "МДК.05.03 Тестирование информ. систем",
+              "teacher": "Скрипник М.А.",
+              "room": "312",
+              "changed": false
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "МДК.06.04 Интеллект. системы и технологии",
+              "teacher": "Стекленев М.В.",
+              "room": "304",
+              "changed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.25",
+      "lessons": [
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.06.03 Устройство и функцион. информ. системы",
+              "teacher": "Куликова М.Е.",
+              "room": "313",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.06.03 Устройство и функцион. информ. системы",
+              "teacher": "Куликова М.Е.",
+              "room": "313",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.26",
+      "lessons": [
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Компьютерные сети",
+              "teacher": "Щевровский Н.В.",
+              "room": "311",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 6,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.05.02 Разраб. кода информ. систем",
+              "teacher": "Бачурина С.П.",
+              "room": "312",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.27",
+      "lessons": [
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.06.03 Устройство и функцион. информ. системы",
+              "teacher": "Куликова М.Е.",
+              "room": "313",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 6,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.05.02 Разраб. кода информ. систем",
+              "teacher": "Щевровский Н.В.",
+              "room": "311",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.28",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.05.02 Разраб. кода информ. систем",
+              "teacher": "Бачурина С.П.",
+              "room": "313",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.06.03 Устройство и функцион. информ. системы",
+              "teacher": "Куликова М.Е.",
+              "room": "312",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.02.01 Технол. разраб. прог. обеспеч.",
+              "teacher": "Саютин В.Н.",
+              "room": "312",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.05.02 Разраб. кода информ. систем",
+              "teacher": "Бачурина С.П.",
+              "room": "309",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.29",
+      "lessons": [
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "Иност. (англ) язык в проф. деят.",
+              "teacher": "Спиридонова Ю.Ю.",
+              "room": "422",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.02.03 Математ. моделирование",
+              "teacher": "Алешкова Т.Н.",
+              "room": "203",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "Иност. (англ) язык в проф. деят.",
+              "teacher": "Спиридонова Ю.Ю.",
+              "room": "108",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.32",
+      "lessons": [
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Русский язык и культура речи",
+              "teacher": "Гордеева З.А.",
+              "room": "229",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Иност. (англ) язык в проф. деят.",
+              "teacher": "Спиридонова Ю.Ю.",
+              "room": "216",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы алгоритм. и программ.",
+              "teacher": "Алешкова Т.Н.",
+              "room": "309",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.33",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы алгоритм. и программ.",
+              "teacher": "Бачурина С.П.",
+              "room": "311",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Операц. системы и среды",
+              "teacher": "Щевровский Н.В.",
+              "room": "303",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Информ. технологии",
+              "teacher": "Тигова А.Ю.",
+              "room": "209",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.34",
+      "lessons": [
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Операц. системы и среды",
+              "teacher": "Стекленев М.В.",
+              "room": "321",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы алгоритм. и программ.",
+              "teacher": "Бачурина С.П.",
+              "room": "312",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.35",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Информ. технологии",
+              "teacher": "Лестюк М.М.",
+              "room": "304",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы алгоритм. и программ.",
+              "teacher": "Алешкова Т.Н.",
+              "room": "309",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.36",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Операц. системы и среды",
+              "teacher": "Стекленев М.В.",
+              "room": "321",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы алгоритм. и программ.",
+              "teacher": "Бачурина С.П.",
+              "room": "311",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Информ. технологии",
+              "teacher": "Лестюк М.М.",
+              "room": "304",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.37",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Элементы высшей математики",
+              "teacher": "Скрипник М.А.",
+              "room": "203",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Элементы высшей математики",
+              "teacher": "Скрипник М.А.",
+              "room": "203",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ИСП-9.38",
+      "lessons": [
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Элементы высшей математики",
+              "teacher": "Скрипник М.А.",
+              "room": "203",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Операц. системы и среды",
+              "teacher": "Щевровский Н.В.",
+              "room": "311",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час",
+              "teacher": "Зловидова И.А.",
+              "room": "221",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ОИС-1.11",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "Иност. (англ) язык в проф. деят.",
+              "teacher": "Спиридонова Ю.Ю.",
+              "room": "108",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы информ. технологий",
+              "teacher": "Тигова А.Ю.",
+              "room": "317",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "Иност. (англ) язык в проф. деят.",
+              "teacher": "Спиридонова Ю.Ю.",
+              "room": "216",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ОИС-9.10",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Верхоланцева А.В.",
+              "room": "105",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Иностр. (англ.) язык",
+              "teacher": "Ганшу О.С.",
+              "room": "422",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Информатика",
+              "teacher": "Лестюк М.М.",
+              "room": "Библ",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Математика",
+              "teacher": "Фарберова Ю.В.",
+              "room": "301",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Информатика",
+              "teacher": "Лестюк М.М.",
+              "room": "207",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ОИС-9.6",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "Иност. (англ) язык в проф. деят.",
+              "teacher": "Спиридонова Ю.Ю.",
+              "room": "108",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы информ. технологий",
+              "teacher": "Тигова А.Ю.",
+              "room": "317",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "Иност. (англ) язык в проф. деят.",
+              "teacher": "Спиридонова Ю.Ю.",
+              "room": "216",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ОИС-9.7",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "Иност. (англ) язык в проф. деят.",
+              "teacher": "Спиридонова Ю.Ю.",
+              "room": "108",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы информ. технологий",
+              "teacher": "Тигова А.Ю.",
+              "room": "317",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "Иност. (англ) язык в проф. деят.",
+              "teacher": "Спиридонова Ю.Ю.",
+              "room": "216",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ОИС-9.9",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Верхоланцева А.В.",
+              "room": "105",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Иностр. (англ.) язык",
+              "teacher": "Ганшу О.С.",
+              "room": "422",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Информатика",
+              "teacher": "Лестюк М.М.",
+              "room": "Библ",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Математика",
+              "teacher": "Фарберова Ю.В.",
+              "room": "301",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Информатика",
+              "teacher": "Лестюк М.М.",
+              "room": "207",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ПК-9.1",
+      "lessons": [
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час",
+              "teacher": "Фунина Е.В.",
+              "room": "читал. зал",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.02 Проц. пригот., подгот.к реализ. кулинар. полуфабрикатов",
+              "teacher": "Лемишева Е.Р.",
+              "room": "101",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.02.02 Проц. приг., подг. к реал. и презен. гор. блюд, кул. изд., закусок",
+              "teacher": "Лемишева Е.Р.",
+              "room": "101",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ПК-9.3",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Лапицкая С.М.",
+              "room": "103",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Математика",
+              "teacher": "Май О.Г.",
+              "room": "216",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Садиков Р.К.",
+              "room": "с.зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ПКД-1.28",
+      "lessons": [
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.02.02 Проц. приг., подг. к реал. гор. блюд, кул. изд., зак. сл. ассорт.",
+              "teacher": "Лемишева Е.Р.",
+              "room": "105",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Психология общения",
+              "teacher": "Зачиняева М.А.",
+              "room": "231",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ПКД-1.32",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Дудин В.В.",
+              "room": "221",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Дудин В.В.",
+              "room": "103",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Химия",
+              "teacher": "Бондаревская И.Н.",
+              "room": "225",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ПКД-9.17",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы предприн-ва и фин. грамотности",
+              "teacher": "Поспелова А.В.",
+              "room": "423",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы предприн-ва и фин. грамотности",
+              "teacher": "Поспелова А.В.",
+              "room": "421",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.05.02 Проц. приг., подг. к реал. хлеб., муч. конд. изд. сл. ассорт.",
+              "teacher": "Гельцер А.Д.",
+              "room": "101",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Правовые основы проф. деятельности",
+              "teacher": "Винокурова Ю.А.",
+              "room": "229",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ПКД-9.18",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы предприн-ва и фин. грамотности",
+              "teacher": "Поспелова А.В.",
+              "room": "423",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы предприн-ва и фин. грамотности",
+              "teacher": "Поспелова А.В.",
+              "room": "421",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.05.02 Проц. приг., подг. к реал. хлеб., муч. конд. изд. сл. ассорт.",
+              "teacher": "Гельцер А.Д.",
+              "room": "101",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Правовые основы проф. деятельности",
+              "teacher": "Винокурова Ю.А.",
+              "room": "229",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ПКД-9.21",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "МДК.03.02 Проц. приг., подг. к реал. хол. блюд, кул. изд., зак. слож. ассорт.",
+              "teacher": "Сердюк И.Д.",
+              "room": "117",
+              "changed": false,
+              "type": "Лаб"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "МДК.03.02 Проц. приг., подг. к реал. хол. блюд, кул. изд., зак. слож. ассорт.",
+              "teacher": "Сердюк И.Д.",
+              "room": "117",
+              "changed": false,
+              "type": "Лаб"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "МДК.03.02 Проц. приг., подг. к реал. хол. блюд, кул. изд., зак. слож. ассорт.",
+              "teacher": "Сердюк И.Д.",
+              "room": "117",
+              "changed": false,
+              "type": "Лаб"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "МДК.03.02 Проц. приг., подг. к реал. хол. блюд, кул. изд., зак. слож. ассорт.",
+              "teacher": "Сердюк И.Д.",
+              "room": "117",
+              "changed": false,
+              "type": "Лаб"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "МДК.03.02 Проц. приг., подг. к реал. хол. блюд, кул. изд., зак. слож. ассорт.",
+              "teacher": "Сердюк И.Д.",
+              "room": "117",
+              "changed": false,
+              "type": "Лаб"
+            }
+          ]
+        },
+        {
+          "pair": 6,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "МДК.03.02 Проц. приг., подг. к реал. хол. блюд, кул. изд., зак. слож. ассорт.",
+              "teacher": "Сердюк И.Д.",
+              "room": "117",
+              "changed": false,
+              "type": "Лаб"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ПКД-9.22",
+      "lessons": [
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.02.02 Проц. приг., подг. к реал. гор. блюд, кул. изд., зак. сл. ассорт.",
+              "teacher": "Лемишева Е.Р.",
+              "room": "105",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Психология общения",
+              "teacher": "Зачиняева М.А.",
+              "room": "231",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ПКД-9.25",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Дудин В.В.",
+              "room": "221",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Дудин В.В.",
+              "room": "103",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Химия",
+              "teacher": "Бондаревская И.Н.",
+              "room": "225",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ПКД-9.26",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "Информ. технол. в проф. деят.",
+              "teacher": "Бенгардт Н.А.",
+              "room": "102",
+              "changed": false
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "Информ. технол. в проф. деят.",
+              "teacher": "Бенгардт Н.А.",
+              "room": "102",
+              "changed": false
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "Информ. технол. в проф. деят.",
+              "teacher": "Бенгардт Н.А.",
+              "room": "102",
+              "changed": false
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "Информ. технол. в проф. деят.",
+              "teacher": "Бенгардт Н.А.",
+              "room": "102",
+              "changed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ПКД-9.27",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "Информ. технол. в проф. деят.",
+              "teacher": "Бенгардт Н.А.",
+              "room": "102",
+              "changed": false
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "Информ. технол. в проф. деят.",
+              "teacher": "Бенгардт Н.А.",
+              "room": "102",
+              "changed": false
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "Информ. технол. в проф. деят.",
+              "teacher": "Бенгардт Н.А.",
+              "room": "102",
+              "changed": false
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "Информ. технол. в проф. деят.",
+              "teacher": "Бенгардт Н.А.",
+              "room": "102",
+              "changed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ПКД-9.29",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Бондаревская И.Н.",
+              "room": "101",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Химия",
+              "teacher": "Бондаревская И.Н.",
+              "room": "225",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физика",
+              "teacher": "Степанова М.В.",
+              "room": "408",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Николина Д.В.",
+              "room": "103",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Литература",
+              "teacher": "Михайленко А.В.",
+              "room": "206",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ПКД-9.30",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Лапицкая С.М.",
+              "room": "103",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физика",
+              "teacher": "Степанова М.В.",
+              "room": "408",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Математика",
+              "teacher": "Май О.Г.",
+              "room": "231",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "Химия",
+              "teacher": "Бондаревская И.Н.",
+              "room": "225",
+              "changed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ПКД-9.31",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Лапицкая С.М.",
+              "room": "103",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Математика",
+              "teacher": "Май О.Г.",
+              "room": "216",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Садиков Р.К.",
+              "room": "с.зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Совещание",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Совещание (10:00)",
+              "teacher": "Лемишева Е.Р.",
+              "room": "305",
+              "changed": false,
+              "type": "Совещание"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "РПО-9.1",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Алешкова Т.Н.",
+              "room": "426",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы безопасности и защиты Родины",
+              "teacher": "Резник Е.Н.",
+              "room": "201",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Николина Д.В.",
+              "room": "206",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Химия",
+              "teacher": "Новопашина И.В.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Химия",
+              "teacher": "Новопашина И.В.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "РПО-9.2",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Стекленев М.В.",
+              "room": "306",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Введение в специальность",
+              "teacher": "Стасюк В.С.",
+              "room": "303",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы безопасности и защиты Родины",
+              "teacher": "Резник Е.Н.",
+              "room": "201",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Русский язык",
+              "teacher": "Михайленко А.В.",
+              "room": "читал. зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Химия",
+              "teacher": "Новопашина И.В.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "РПО-9.3",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Лысенко В.Ю.",
+              "room": "401",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Садиков Р.К.",
+              "room": "с.зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Введение в специальность",
+              "teacher": "Стасюк В.С.",
+              "room": "207",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "Информатика",
+              "teacher": "Мельник Д.В.",
+              "room": "207",
+              "changed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "РПО-9.4",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Лысенко В.Ю.",
+              "room": "401",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Садиков Р.К.",
+              "room": "с.зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Математика",
+              "teacher": "Фарберова Ю.В.",
+              "room": "301",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Обществознание",
+              "teacher": "Дудин В.В.",
+              "room": "04",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "РПО-9.5",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Стекленев М.В.",
+              "room": "306",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Садиков Р.К.",
+              "room": "с.зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Введение в специальность",
+              "teacher": "Стекленев М.В.",
+              "room": "304",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "РТИ-9.1",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Алешкова Т.Н.",
+              "room": "426",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Обществознание",
+              "teacher": "Грабовецкий Д.С.",
+              "room": "430",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Введение в специальность",
+              "teacher": "Алешкова Т.Н.",
+              "room": "309",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Химия",
+              "teacher": "Нигматулина Р.С.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "РТИ-9.2",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Саютин В.Н.",
+              "room": "317",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Математика",
+              "teacher": "Фарберова Ю.В.",
+              "room": "301",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Иностр. (англ.) язык",
+              "teacher": "Спиридонова Ю.Ю.",
+              "room": "422",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Химия",
+              "teacher": "Нигматулина Р.С.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ТДк-1.11",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Экономика и основы АФХД торг. орг-ции",
+              "teacher": "Чуркина Н.Н.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История России",
+              "teacher": "Николина Д.В.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.02 Организация и осуществление продаж",
+              "teacher": "Ибрагимова О.Ю.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Прикладные комп. прогр. в проф деят-ти",
+              "teacher": "Тигова А.Ю.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ТДк-9.10",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Гузнякова Ю.В.",
+              "room": "Библ",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Краснова А.В.",
+              "room": "228",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Краснова А.В.",
+              "room": "216",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Садиков Р.К.",
+              "room": "с.зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Литература",
+              "teacher": "Макуха Е.А.",
+              "room": "409",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ТДк-9.3",
+      "lessons": [
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.04.01 Технол. продаж потреб. товаров и коорд. работы с клиентами",
+              "teacher": "Ибрагимова О.Ю.",
+              "room": "109",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Автоматизация торгово-технол. процессов",
+              "teacher": "Тигова А.Ю.",
+              "room": "322",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ТДк-9.6",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Экономика и основы АФХД торг. орг-ции",
+              "teacher": "Чуркина Н.Н.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История России",
+              "teacher": "Николина Д.В.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.02 Организация и осуществление продаж",
+              "teacher": "Ибрагимова О.Ю.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Прикладные комп. прогр. в проф деят-ти",
+              "teacher": "Тигова А.Ю.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ТДт-1.7",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час",
+              "teacher": "Ибрагимова О.Ю.",
+              "room": "108",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.02.02  Товароведение потребительских товаров",
+              "teacher": "Ибрагимова О.Ю.",
+              "room": "109",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.03.01 Технол. продаж потреб. товаров и коорд. работы с клиентами",
+              "teacher": "Ибрагимова О.Ю.",
+              "room": "109",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ТДт-9.1",
+      "lessons": [
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Правовое обеспеч. проф. деятельности",
+              "teacher": "Галаган А.А.",
+              "room": "105",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.04.01 Технол. проведения маркет.исслед.",
+              "teacher": "Ибрагимова О.Ю.",
+              "room": "209",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ТДт-9.2",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час",
+              "teacher": "Ибрагимова О.Ю.",
+              "room": "108",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.02.02  Товароведение потребительских товаров",
+              "teacher": "Ибрагимова О.Ю.",
+              "room": "109",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.03.01 Технол. продаж потреб. товаров и коорд. работы с клиентами",
+              "teacher": "Ибрагимова О.Ю.",
+              "room": "109",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ТДт-9.4",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Экономика и основы АФХД торг. орг-ции",
+              "teacher": "Чуркина Н.Н.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История России",
+              "teacher": "Николина Д.В.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.02 Организация и осуществление продаж",
+              "teacher": "Ибрагимова О.Ю.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Прикладные комп. прогр. в проф деят-ти",
+              "teacher": "Тигова А.Ю.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ТДт-9.5",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Экономика и основы АФХД торг. орг-ции",
+              "teacher": "Чуркина Н.Н.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История России",
+              "teacher": "Николина Д.В.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.02 Организация и осуществление продаж",
+              "teacher": "Ибрагимова О.Ю.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Прикладные комп. прогр. в проф деят-ти",
+              "teacher": "Тигова А.Ю.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ТДт-9.8",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Стороженко Т.А.",
+              "room": "421",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "Информатика",
+              "teacher": "Лестюк М.М.",
+              "room": "304",
+              "changed": false
+            },
+            {
+              "pg": 2,
+              "discipline": "Информатика",
+              "teacher": "Щевровский Н.В.",
+              "room": "313",
+              "changed": false
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Краснова А.В.",
+              "room": "216",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Садиков Р.К.",
+              "room": "с.зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ТДт-9.9",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Стороженко Т.А.",
+              "room": "421",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Математика",
+              "teacher": "Зловидова И.А.",
+              "room": "221",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Краснова А.В.",
+              "room": "216",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Садиков Р.К.",
+              "room": "с.зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ф-1.31",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы бух. учета",
+              "teacher": "Мазур И.Е.",
+              "room": "231",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы бух. учета",
+              "teacher": "Мазур И.Е.",
+              "room": "426",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.01 Основы организации и функцион. бюджетной системы РФ",
+              "teacher": "Рытова Т.А.",
+              "room": "422",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Максимова Т.С.",
+              "room": "спорт. зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ф-9.23",
+      "lessons": [
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Правовое обеспеч. проф. деятельности",
+              "teacher": "Галаган А.А.",
+              "room": "108",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.03.01 Финансы организаций",
+              "teacher": "Верхоланцева А.В.",
+              "room": "421",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы философии",
+              "teacher": "Николина Д.В.",
+              "room": "401",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ф-9.24",
+      "lessons": [
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Правовое обеспеч. проф. деятельности",
+              "teacher": "Галаган А.А.",
+              "room": "108",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.03.01 Финансы организаций",
+              "teacher": "Верхоланцева А.В.",
+              "room": "421",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы философии",
+              "teacher": "Николина Д.В.",
+              "room": "401",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ф-9.26",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Экономика организации",
+              "teacher": "Стороженко Т.А.",
+              "room": "411",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы финансовой грамотности",
+              "teacher": "Рытова Т.А.",
+              "room": "305",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.01 Основы организации и функцион. бюджетной системы РФ",
+              "teacher": "Рытова Т.А.",
+              "room": "422",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Максимова Т.С.",
+              "room": "спорт. зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ф-9.27",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы бух. учета",
+              "teacher": "Мазур И.Е.",
+              "room": "231",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы бух. учета",
+              "teacher": "Мазур И.Е.",
+              "room": "426",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.01 Основы организации и функцион. бюджетной системы РФ",
+              "teacher": "Рытова Т.А.",
+              "room": "422",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Максимова Т.С.",
+              "room": "спорт. зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ф-9.29",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Калинина В.С.",
+              "room": "216",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Обществознание",
+              "teacher": "Галаган А.А.",
+              "room": "426",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Литература",
+              "teacher": "Макуха Е.А.",
+              "room": "407",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Математика",
+              "teacher": "Зловидова И.А.",
+              "room": "108",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Химия",
+              "teacher": "Бондаревская И.Н.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ф-9.30",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Калинина В.С.",
+              "room": "216",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Обществознание",
+              "teacher": "Галаган А.А.",
+              "room": "426",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Литература",
+              "teacher": "Макуха Е.А.",
+              "room": "407",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Математика",
+              "teacher": "Зловидова И.А.",
+              "room": "108",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Химия",
+              "teacher": "Бондаревская И.Н.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ю-9.10",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Теория государства и права",
+              "teacher": "Агашкова М.С.",
+              "room": "206",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Теория государства и права",
+              "teacher": "Агашкова М.С.",
+              "room": "206",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Теория государства и права",
+              "teacher": "Агашкова М.С.",
+              "room": "103",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Документ. обеспечение управлен.",
+              "teacher": "Гордеева З.А.",
+              "room": "305",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час",
+              "teacher": "Зачиняева М.А.",
+              "room": "216",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ю-9.11",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Теория государства и права",
+              "teacher": "Агашкова М.С.",
+              "room": "206",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Теория государства и права",
+              "teacher": "Агашкова М.С.",
+              "room": "206",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Теория государства и права",
+              "teacher": "Агашкова М.С.",
+              "room": "103",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Документ. обеспечение управлен.",
+              "teacher": "Гордеева З.А.",
+              "room": "305",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час",
+              "teacher": "Зачиняева М.А.",
+              "room": "216",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ю-9.7",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Конституционное право России",
+              "teacher": "Гейсман А.Ю.",
+              "room": "430",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.02.01 Судопр-тво и правоохран. органы",
+              "teacher": "Гейсман А.Ю.",
+              "room": "401",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Теория государства и права",
+              "teacher": "Госниц М.А.",
+              "room": "324",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.02.01 Судопр-тво и правоохран. органы",
+              "teacher": "Гейсман А.Ю.",
+              "room": "430",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ю-9.8",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "Иност. (англ) язык в проф. деят.",
+              "teacher": "Ганшу О.С.",
+              "room": "429",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.02.01 Судопр-тво и правоохран. органы",
+              "teacher": "Гейсман А.Ю.",
+              "room": "401",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Конституционное право России",
+              "teacher": "Гейсман А.Ю.",
+              "room": "430",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Теория государства и права",
+              "teacher": "Госниц М.А.",
+              "room": "324",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час",
+              "teacher": "Ганшу О.С.",
+              "room": "429",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ю-9.9",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Иност. (англ) язык в проф. деят.",
+              "teacher": "Ганшу О.С.",
+              "room": "422",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Теория государства и права",
+              "teacher": "Агашкова М.С.",
+              "room": "103",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Теория государства и права",
+              "teacher": "Агашкова М.С.",
+              "room": "206",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час",
+              "teacher": "Зачиняева М.А.",
+              "room": "216",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Юпд-1.18",
+      "lessons": [
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.02.01 Судопр-тво и правоохран. органы",
+              "teacher": "Гейсман А.Ю.",
+              "room": "401",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Иност. (англ) язык в проф. деят.",
+              "teacher": "Ганшу О.С.",
+              "room": "429",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Юпд-9.1",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы бережливого производства",
+              "teacher": "Грабовецкий Д.С.",
+              "room": "229",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.03.02 Админист. деятельность правоохран. органов",
+              "teacher": "Госниц М.А.",
+              "room": "324",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.03 Гражданский процесс",
+              "teacher": "Веремчук А.Н.",
+              "room": "401",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Юпд-9.13",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Госниц М.А.",
+              "room": "324",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Максимова Т.С.",
+              "room": "спорт. зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "География",
+              "teacher": "Киреева Е.С.",
+              "room": "228",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Математика",
+              "teacher": "Май О.Г.",
+              "room": "201",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 2,
+              "discipline": "Информатика",
+              "teacher": "Мельник Д.В.",
+              "room": "321",
+              "changed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Юпд-9.14",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Госниц М.А.",
+              "room": "324",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Максимова Т.С.",
+              "room": "спорт. зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Дудин В.В.",
+              "room": "04",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Юпд-9.2",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Основы бережливого производства",
+              "teacher": "Грабовецкий Д.С.",
+              "room": "229",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.03.02 Админист. деятельность правоохран. органов",
+              "teacher": "Госниц М.А.",
+              "room": "324",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.03 Гражданский процесс",
+              "teacher": "Веремчук А.Н.",
+              "room": "401",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Юпо-9.16",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Резник Е.Н.",
+              "room": "407",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "География",
+              "teacher": "Киреева Е.С.",
+              "room": "229",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Максимова Т.С.",
+              "room": "спорт. зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Антонова Ю.И.",
+              "room": "409",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Математика",
+              "teacher": "Май О.Г.",
+              "room": "408",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Юпо-9.17",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Резник Е.Н.",
+              "room": "407",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "География",
+              "teacher": "Киреева Е.С.",
+              "room": "229",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Максимова Т.С.",
+              "room": "спорт. зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Антонова Ю.И.",
+              "room": "409",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Математика",
+              "teacher": "Май О.Г.",
+              "room": "408",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Юса-1.12",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "ПМ.01 Правоприменительная деятельность (Учеб. практ. (рассред.))",
+              "teacher": "Шапошников А.Ю.",
+              "room": "408",
+              "changed": false
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.01 Административный процесс",
+              "teacher": "Веремчук А.Н.",
+              "room": "407",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Юридическая психология",
+              "teacher": "Лысенко В.Ю.",
+              "room": "07",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.01 Административный процесс",
+              "teacher": "Веремчук А.Н.",
+              "room": "401",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час",
+              "teacher": "Гейсман А.Ю.",
+              "room": "430",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Юса-9.15",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Кураторский час (9:00)",
+              "teacher": "Винокурова Ю.А.",
+              "room": "305",
+              "changed": false,
+              "type": "Кураторский час"
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "История",
+              "teacher": "Антонова Ю.И.",
+              "room": "409",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Физ. культура",
+              "teacher": "Максимова Т.С.",
+              "room": "спорт. зал",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 1,
+              "discipline": "Иностр. (англ.) язык",
+              "teacher": "Ганшу О.С.",
+              "room": "429",
+              "changed": false,
+              "type": "Пр"
+            },
+            {
+              "pg": 2,
+              "discipline": "Иностр. (нем.) язык",
+              "teacher": "Ганшу О.С.",
+              "room": "дист. обуч",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Юса-9.3",
+      "lessons": [
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.03.01 Судебное делопр-во",
+              "teacher": "Суворов В.В.",
+              "room": "321",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.01 Административный процесс",
+              "teacher": "Веремчук А.Н.",
+              "room": "401",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        },
+        {
+          "pair": 5,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.01 Административный процесс",
+              "teacher": "Веремчук А.Н.",
+              "room": "407",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Юса-9.4",
+      "lessons": [
+        {
+          "pair": 1,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "ПМ.01 Правоприменительная деятельность (Учеб. практ. (рассред.))",
+              "teacher": "Шапошников А.Ю.",
+              "room": "408",
+              "changed": false
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.01 Административный процесс",
+              "teacher": "Веремчук А.Н.",
+              "room": "407",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 3,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "Юридическая психология",
+              "teacher": "Лысенко В.Ю.",
+              "room": "07",
+              "changed": false,
+              "type": "Пр"
+            }
+          ]
+        },
+        {
+          "pair": 4,
+          "subgroups": [
+            {
+              "pg": 0,
+              "discipline": "МДК.01.01 Административный процесс",
+              "teacher": "Веремчук А.Н.",
+              "room": "401",
+              "changed": false,
+              "type": "Лек"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

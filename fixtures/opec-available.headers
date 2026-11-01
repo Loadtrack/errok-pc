@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 01 Nov 2026 16:11:51 GMT
+Content-Type: application/json
+Content-Length: 5601
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: strict-origin-when-cross-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Cross-Origin-Opener-Policy: same-origin-allow-popups
+Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://mc.yandex.ru https://mc.yandex.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' https://mc.yandex.ru https://mc.yandex.com data:; connect-src 'self' https://mc.yandex.ru https://mc.yandex.com wss://mc.yandex.com; frame-ancestors 'self' https://max.ru https://*.max.ru https://vk.com https://*.vk.com https://*.vk-apps.com https://web.telegram.org
+Last-Modified: Fri, 30 Oct 2026 06:36:57 GMT
+ETag: "15e1-65f0905cec313"
+Accept-Ranges: bytes
+
