@@ -10,13 +10,15 @@ import '@fontsource/mulish/latin-700.css';
 import '@fontsource/mulish/latin-800.css';
 import '@fontsource/unbounded/cyrillic-600.css';
 import '@fontsource/unbounded/cyrillic-700.css';
+import '@fontsource/unbounded/cyrillic-800.css';
 import '@fontsource/unbounded/latin-600.css';
 import '@fontsource/unbounded/latin-700.css';
+import '@fontsource/unbounded/latin-800.css';
 import './styles.css';
 import { listen } from '@tauri-apps/api/event';
 import { isPermissionGranted, onAction, requestPermission, sendNotification } from '@tauri-apps/plugin-notification';
 import { backend, isDesktop } from './bridge';
-import { dayRelation, formatRetry, formatUpdated, fullDate, lessonTimes, today, weekdayShort } from './dates';
+import { dayNumber, dayRelation, formatRetry, formatUpdated, fullDate, lessonTimes, today, weekdayShort } from './dates';
 import type { AppSnapshot, Catalog, College, DayView, GroupView, LessonView, NotificationEvent, Settings, Theme } from './types';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
@@ -109,12 +111,37 @@ function toast(message: string): void {
   toastTimer = setTimeout(() => toastElement.classList.remove('visible'), 3600);
 }
 
+interface ThemeOption {
+  id: Theme;
+  label: string;
+  swatch: string;
+  accent: string;
+  pageColor: string;
+}
+
+export const THEME_OPTIONS: ThemeOption[] = [
+  { id: 'system', label: 'Системная', swatch: 'linear-gradient(135deg, #0d0d0f 50%, #f4f4f8 50%)', accent: '#7c6cfc', pageColor: '#0d0d0f' },
+  { id: 'dark', label: 'Тёмная', swatch: '#0d0d0f', accent: '#7c6cfc', pageColor: '#0d0d0f' },
+  { id: 'light', label: 'Светлая', swatch: '#f4f4f8', accent: '#6c5ce7', pageColor: '#f4f4f8' },
+  { id: 'midnight', label: 'Полночь', swatch: '#0a0e1a', accent: '#5b8cff', pageColor: '#0a0e1a' },
+  { id: 'ocean', label: 'Океан', swatch: '#07131a', accent: '#22d3ee', pageColor: '#07131a' },
+  { id: 'rose', label: 'Роза', swatch: '#160d12', accent: '#fb7185', pageColor: '#160d12' },
+  { id: 'forest', label: 'Лес', swatch: '#0a140e', accent: '#34d399', pageColor: '#0a140e' },
+  { id: 'light-ocean', label: 'Светлый океан', swatch: '#eef7fa', accent: '#0891b2', pageColor: '#eef7fa' },
+  { id: 'light-rose', label: 'Светлая роза', swatch: '#fdf2f5', accent: '#e11d6f', pageColor: '#fdf2f5' },
+  { id: 'light-forest', label: 'Светлый лес', swatch: '#eef8f1', accent: '#059669', pageColor: '#eef8f1' },
+];
+
+function resolveTheme(theme: Theme): Exclude<Theme, 'system'> {
+  if (theme !== 'system') return theme;
+  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+}
+
 function applyTheme(theme: Theme): void {
-  const resolved = theme === 'system'
-    ? (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
-    : theme;
+  const resolved = resolveTheme(theme);
   document.documentElement.dataset.theme = resolved;
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', resolved === 'light' ? '#f4f4f8' : '#0d0d0f');
+  const option = THEME_OPTIONS.find((item) => item.id === resolved);
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', option?.pageColor ?? '#0d0d0f');
 }
 
 window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', () => {
@@ -134,28 +161,36 @@ function defaultDate(value: AppSnapshot): string {
 function renderShell(): void {
   app.innerHTML = `
     <div class="app-shell">
-      <aside class="sidebar">
-        ${brand()}
-        <div class="sidebar-label">ДНИ</div>
-        <nav class="day-nav" id="day-nav" aria-label="Дни расписания"></nav>
-        <div class="sidebar-foot">
-          <div class="connection" id="connection">Данные с errok.ru</div>
-          <div class="updated" id="updated"></div>
-        </div>
-      </aside>
-      <main class="main-panel">
-        <header class="topbar">
-          <div class="favorites-summary"><small id="college-label"></small><strong id="favorites-text"></strong></div>
-          <div class="top-actions">
-            <button class="btn" id="refresh-button" title="Проверить сейчас">${icon('refresh')}<span>Проверить</span></button>
+      <header class="site-header">
+        <div class="hd-inner">
+          ${brand()}
+          <div class="hd-context">
+            <span class="hd-college" id="college-label"></span>
+            <span class="hd-favorites" id="favorites-text"></span>
+          </div>
+          <div class="hd-right">
+            <button class="btn btn-ghost" id="refresh-button" title="Проверить сейчас">${icon('refresh')}<span>Проверить</span></button>
+            <button class="btn btn-icon" id="site-button" title="Открыть на сайте" aria-label="Открыть на сайте">${icon('external')}</button>
             <button class="btn btn-icon" id="settings-button" title="Настройки" aria-label="Настройки">${icon('settings')}</button>
           </div>
-        </header>
+        </div>
+      </header>
+      <main class="page">
         <div id="message-slot" aria-live="polite"></div>
-        <section class="day-heading">
-          <div><h1 id="day-title"></h1><p id="day-subtitle"></p></div>
-          <button class="btn" id="site-button">${icon('external')}<span>Открыть на сайте</span></button>
+        <section class="sch-header">
+          <div class="sch-meta">
+            <h1 class="sch-date-title" id="day-title"></h1>
+            <div class="sch-tags">
+              <span class="tag tag-week" id="day-subtitle"></span>
+              <span class="tag tag-college" id="college-tag"></span>
+            </div>
+          </div>
+          <div class="status-stack">
+            <span class="connection" id="connection">Данные с errok.ru</span>
+            <span class="updated" id="updated"></span>
+          </div>
         </section>
+        <div class="day-switcher" id="day-nav" role="tablist" aria-label="Дни расписания"></div>
         <div class="schedule-content" id="schedule-content"></div>
       </main>
     </div>
@@ -185,7 +220,10 @@ function renderChrome(updateDays = true): void {
   const visible = favorites.slice(0, 3).join(' · ');
   const remainder = favorites.length > 3 ? ` · ещё ${favorites.length - 3}` : '';
   document.querySelector('#college-label')!.textContent = collegeName(snapshot.settings.college);
-  document.querySelector('#favorites-text')!.textContent = `${visible}${remainder}`;
+  document.querySelector('#favorites-text')!.textContent = favorites.length
+    ? `${visible}${remainder}`
+    : 'Группы и преподаватели не выбраны';
+  document.querySelector('#college-tag')!.textContent = collegeName(snapshot.settings.college);
   document.querySelector('#updated')!.textContent = formatUpdated(snapshot.last_updated);
   const connection = document.querySelector('#connection')!;
   connection.textContent = snapshot.message ? 'Нет соединения' : 'Данные с errok.ru';
@@ -201,60 +239,132 @@ function renderDays(): void {
   if (!snapshot) return;
   const nav = document.querySelector('#day-nav');
   if (!nav) return;
-  nav.innerHTML = snapshot.days.map((day) => `
-    <button class="day-item ${day.date === selectedDate ? 'active' : ''}" data-date="${day.date}" aria-current="${day.date === selectedDate ? 'date' : 'false'}">
-      <span class="day-weekday">${weekdayShort(day.date)}</span>
-      <span class="day-name">${dayRelation(day.date)}</span>
-      ${day.available ? '<span class="day-dot" title="Расписание выложено"></span>' : '<span></span>'}
-    </button>`).join('');
-  nav.querySelectorAll<HTMLButtonElement>('.day-item').forEach((button) => {
+  const current = today();
+  nav.innerHTML = snapshot.days.map((day) => {
+    const active = day.date === selectedDate;
+    return `
+    <button class="day-tab ${active ? 'active' : ''} ${day.date === current ? 'today' : ''} ${day.available ? 'fresh' : 'unavailable'}"
+      role="tab" aria-selected="${active}" data-date="${day.date}"
+      aria-label="${dayRelation(day.date)}, ${weekdayShort(day.date)} ${dayNumber(day.date)}" title="${dayRelation(day.date)}">
+      <span class="day-tab-name">${weekdayShort(day.date)}</span>
+      <span class="day-tab-date">${dayNumber(day.date)}</span>
+      <span class="day-tab-dot" aria-hidden="true"></span>
+    </button>`;
+  }).join('');
+  nav.querySelectorAll<HTMLButtonElement>('.day-tab').forEach((button) => {
     button.addEventListener('click', () => void selectDate(button.dataset.date!));
   });
 }
 
 function renderLoading(): void {
   const content = document.querySelector('#schedule-content');
-  if (content) content.innerHTML = '<div class="loading-list"><div class="skeleton"></div><div class="skeleton"></div></div>';
+  if (content) {
+    content.innerHTML = `<div class="groups-grid">
+      <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+    </div>`;
+  }
+}
+
+function plural(count: number, one: string, few: string, many: string): string {
+  const mod10 = count % 10;
+  const mod100 = count % 100;
+  if (mod10 === 1 && mod100 !== 11) return one;
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return few;
+  return many;
+}
+
+const PAIR_TYPES: Array<[RegExp, string]> = [
+  [/лек/i, 'ptb-lec'],
+  [/лаб/i, 'ptb-lab'],
+  [/сем/i, 'ptb-sem'],
+  [/конс/i, 'ptb-cons'],
+  [/экз|зач[её]т/i, 'ptb-exam'],
+  [/курс/i, 'ptb-kur'],
+  [/практ/i, 'ptb-pr'],
+];
+
+function pairTypeClass(value: string | null): string {
+  if (!value) return '';
+  return PAIR_TYPES.find(([pattern]) => pattern.test(value))?.[1] ?? '';
+}
+
+function minutesOf(value: string): number | null {
+  const match = /^(\d{1,2}):(\d{2})$/.exec(value);
+  if (!match) return null;
+  return Number(match[1]) * 60 + Number(match[2]);
+}
+
+function isLessonNow(date: string, start: string, end: string): boolean {
+  if (date !== today()) return false;
+  const from = minutesOf(start);
+  const to = minutesOf(end);
+  if (from === null || to === null) return false;
+  const now = new Date();
+  const current = now.getHours() * 60 + now.getMinutes();
+  return current >= from && current < to;
 }
 
 function renderHomework(lesson: LessonView): string {
   if (!lesson.homework.length) return '';
-  return lesson.homework.map((item) => `<div class="homework"><strong>ДЗ${item.pg ? ` · ${item.pg} подгруппа` : ''}</strong>${escapeHtml(item.text)}</div>`).join('');
+  return lesson.homework
+    .map((item) => `<div class="homework"><strong>ДЗ${item.pg ? ` · ${item.pg} подгруппа` : ''}</strong>${escapeHtml(item.text)}</div>`)
+    .join('');
 }
 
 function renderLesson(lesson: LessonView): string {
   if (!snapshot) return '';
-  const [start, end] = lessonTimes(snapshot.settings.college, currentDay?.date ?? selectedDate, lesson.pair);
+  const date = currentDay?.date ?? selectedDate;
+  const [start, end] = lessonTimes(snapshot.settings.college, date, lesson.pair);
+  const multi = lesson.subgroups.length > 1;
+  const now = isLessonNow(date, start, end);
   const subgroups = lesson.subgroups.map((subgroup) => `
-    <div class="subgroup">
-      <div>
-        <div class="discipline">${discipline(subgroup.discipline)}</div>
-        <div class="teacher">${escapeHtml(subgroup.teacher)}</div>
-        ${subgroup.pg ? `<div class="subgroup-label">${subgroup.pg} подгруппа</div>` : ''}
-        <div class="lesson-tags">
-          ${subgroup.changed && !subgroup.extra ? '<span class="tag changed">изменено</span>' : ''}
-          ${subgroup.extra ? '<span class="tag extra">доп. пара</span>' : ''}
-          ${subgroup.lesson_type ? `<span class="tag">${escapeHtml(subgroup.lesson_type)}</span>` : ''}
+    <div class="sub-item">
+      <div class="lesson-top">
+        <div class="lesson-top-left">
+          ${subgroup.lesson_type ? `<span class="pair-type ${pairTypeClass(subgroup.lesson_type)}">${escapeHtml(subgroup.lesson_type)}</span>` : ''}
+          <span class="lesson-teacher">${escapeHtml(subgroup.teacher)}</span>
+        </div>
+        <div class="lesson-top-right">
+          ${subgroup.pg ? `<span class="subgroup-badge">ПГ <b>${subgroup.pg}</b></span>` : ''}
+          ${subgroup.room ? `<span class="lesson-room">${escapeHtml(subgroup.room)}</span>` : ''}
         </div>
       </div>
-      <div class="room">${escapeHtml(subgroup.room)}</div>
+      <div class="lesson-discipline">${discipline(subgroup.discipline)}</div>
+      ${subgroup.changed || subgroup.extra ? `<div class="lesson-tags">
+        ${subgroup.changed && !subgroup.extra ? '<span class="tag-changed">изменено</span>' : ''}
+        ${subgroup.extra ? '<span class="tag-changed">доп. пара</span>' : ''}
+      </div>` : ''}
     </div>`).join('');
   return `
-    <article class="lesson-card">
-      <div class="lesson-time"><span class="time-start">${start}</span><span class="time-end">${end}</span><span class="pair-number">${lesson.pair} пара</span></div>
-      <div class="lesson-content ${lesson.subgroups.length > 1 ? 'two-columns' : ''}">${subgroups}${renderHomework(lesson)}</div>
+    <article class="lesson-item ${now ? 'li-now' : ''} ${multi ? 'li-multi' : ''}">
+      <div class="lp-col">
+        <div class="lesson-pair">${lesson.pair}</div>
+        ${start ? `<div class="lesson-time">${start}<span>${end}</span></div>` : ''}
+      </div>
+      <div class="lesson-content ${multi ? 'multi' : ''}">
+        ${subgroups}
+        ${renderHomework(lesson)}
+      </div>
     </article>`;
 }
 
 function renderGroup(group: GroupView): string {
+  const count = group.lessons.length;
+  const countLabel = plural(count, 'пара', 'пары', 'пар');
   return `
-    <section class="group-section">
-      <div class="group-header"><h2>${escapeHtml(group.name)}</h2>${group.status && !group.hidden ? `<span class="status-pill">${escapeHtml(group.status)}</span>` : ''}</div>
+    <section class="group-card ${group.hidden ? 'is-hidden' : ''}">
+      <div class="group-header">
+        <div class="group-title">
+          <h2 class="group-name">${escapeHtml(group.name)}</h2>
+          ${group.status && !group.hidden ? `<span class="group-status">${escapeHtml(group.status)}</span>` : ''}
+        </div>
+        ${group.hidden ? '' : `<div class="lesson-count"><b class="gc-n">${count}</b><span class="gc-u">${countLabel}</span></div>`}
+      </div>
       ${group.hidden
-        ? '<div class="empty-state"><h2>Занятий нет</h2></div>'
-        : group.lessons.length
+        ? '<div class="group-empty"><strong>Занятий нет</strong></div>'
+        : count
           ? `<div class="lessons-list">${group.lessons.map(renderLesson).join('')}</div>`
-          : '<div class="empty-state"><h2>Пар нет</h2><p>Для этой группы на выбранный день занятий нет.</p></div>'}
+          : '<div class="group-empty"><strong>Пар нет</strong><span>На выбранный день занятий нет.</span></div>'}
     </section>`;
 }
 
@@ -264,8 +374,8 @@ function renderDay(): void {
   document.querySelector('#day-title')!.textContent = fullDate(selectedDate);
   const available = snapshot.days.find((day) => day.date === selectedDate)?.available ?? false;
   document.querySelector('#day-subtitle')!.textContent = currentDay
-    ? `${currentDay.week} неделя · ${collegeName(snapshot.settings.college)}`
-    : (available ? 'Расписание выложено' : 'Ждём публикации расписания');
+    ? `${currentDay.week} неделя`
+    : (available ? 'Расписание выложено' : 'Ждём публикации');
   const content = document.querySelector('#schedule-content');
   if (!content) return;
   if (!currentDay) {
@@ -282,9 +392,12 @@ function renderDay(): void {
     return;
   }
   const announcements = currentDay.announcements.length ? `
-    <div class="announcements">${currentDay.announcements.map((item) => `
-      <div class="announcement"><strong>${escapeHtml(item.group)}${item.pair ? ` · на ${item.pair} пару` : ''}</strong>${escapeHtml(item.text)}</div>`).join('')}</div>` : '';
-  content.innerHTML = announcements + currentDay.groups.map(renderGroup).join('');
+    <div class="ann-box">${currentDay.announcements.map((item) => `
+      <div class="ann-item">
+        <div class="ann-head"><span class="ann-title">Объявление</span><span class="ann-by">${escapeHtml(item.group)}${item.pair ? ` · ${item.pair} пара` : ''}</span></div>
+        <div class="ann-text">${escapeHtml(item.text)}</div>
+      </div>`).join('')}</div>` : '';
+  content.innerHTML = announcements + `<div class="groups-grid">${currentDay.groups.map(renderGroup).join('')}</div>`;
 }
 
 async function selectDate(date: string): Promise<void> {
@@ -507,9 +620,15 @@ function openSettings(): void {
     content.innerHTML = `
       <section class="setup-section"><div class="setup-section-title"><h2>Колледж</h2></div><div id="settings-college">${collegeCards(draft)}</div></section>
       <section class="setup-section"><div class="setup-section-title"><h2>Группы и преподаватели</h2><span>До 8 каждого вида</span></div><div class="picker" id="settings-picker"></div></section>
-      <div class="settings-row"><div><strong>Тема</strong><small>Системная или выбранная вручную</small></div><div class="segmented" id="theme-options">
-        ${(['system', 'light', 'dark'] as Theme[]).map((theme) => `<button class="segment ${draft.theme === theme ? 'active' : ''}" data-theme="${theme}">${theme === 'system' ? 'Системная' : theme === 'light' ? 'Светлая' : 'Тёмная'}</button>`).join('')}
-      </div></div>
+      <div class="settings-row settings-row-theme"><div><strong>Тема</strong><small>Девять тем сайта и системная</small></div>
+        <div class="theme-grid" id="theme-options">
+          ${THEME_OPTIONS.map((option) => `
+            <button class="theme-option ${draft.theme === option.id ? 'active' : ''}" data-theme="${option.id}" title="${option.label}" aria-pressed="${draft.theme === option.id}">
+              <span class="theme-swatch" aria-hidden="true" style="background:${option.swatch}"><i style="background:${option.accent}"></i></span>
+              <span class="theme-name">${option.label}</span>
+            </button>`).join('')}
+        </div>
+      </div>
       <div class="settings-row"><div><strong>Запускать вместе с Windows</strong><small>Сворачивание в трей продолжит работу в фоне</small></div><label class="switch"><input id="autostart-input" type="checkbox" ${draft.autostart ? 'checked' : ''}><span class="switch-slider"></span></label></div>
       <div class="dialog-footer"><button class="btn" id="cancel-settings">Отмена</button><button class="btn btn-primary" id="save-settings">Сохранить</button></div>`;
     setupPicker(content.querySelector<HTMLElement>('#settings-picker')!, draft, catalog);
@@ -541,7 +660,10 @@ function openSettings(): void {
       const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-theme]');
       if (!button) return;
       draft.theme = button.dataset.theme as Theme;
-      content.querySelectorAll('.segment').forEach((item) => item.classList.toggle('active', item === button));
+      content.querySelectorAll('.theme-option').forEach((item) => {
+        item.classList.toggle('active', item === button);
+        item.setAttribute('aria-pressed', String(item === button));
+      });
       applyTheme(draft.theme);
     });
     content.querySelector<HTMLInputElement>('#autostart-input')!.addEventListener('change', (event) => {

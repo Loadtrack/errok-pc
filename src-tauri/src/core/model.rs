@@ -15,6 +15,16 @@ pub enum College {
 pub enum Theme {
     Light,
     Dark,
+    Midnight,
+    Ocean,
+    Rose,
+    Forest,
+    #[serde(rename = "light-ocean")]
+    LightOcean,
+    #[serde(rename = "light-rose")]
+    LightRose,
+    #[serde(rename = "light-forest")]
+    LightForest,
     #[default]
     System,
 }

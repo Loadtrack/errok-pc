@@ -1,5 +1,15 @@
 export type College = 'opec' | 'omaep';
-export type Theme = 'light' | 'dark' | 'system';
+export type Theme =
+  | 'system'
+  | 'dark'
+  | 'light'
+  | 'midnight'
+  | 'ocean'
+  | 'rose'
+  | 'forest'
+  | 'light-ocean'
+  | 'light-rose'
+  | 'light-forest';
 
 export interface Settings {
   college: College;

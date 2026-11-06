@@ -22,7 +22,7 @@ test('главное окно показывает пары и настройк�
 test('день без расписания имеет понятное пустое состояние', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { name: 'БП2-113' })).toBeVisible();
-  await page.getByRole('button', { name: /Сегодня/ }).click();
+  await page.getByRole('tab', { name: /Сегодня/ }).click();
   await expect(page.getByRole('heading', { name: 'Расписание ещё не выложено' })).toBeVisible();
 });
 
