@@ -26,6 +26,25 @@ test('день без расписания имеет понятное пуст�
   await expect(page.getByRole('heading', { name: 'Расписание ещё не выложено' })).toBeVisible();
 });
 
+test('дни переключаются стрелками на клавиатуре', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.getByRole('heading', { name: 'БП2-113' })).toBeVisible();
+  await page.keyboard.press('ArrowLeft');
+  await expect(page.getByRole('heading', { name: 'Расписание ещё не выложено' })).toBeVisible();
+  await page.keyboard.press('ArrowRight');
+  await expect(page.getByText('Разраб.прог.модулей')).toBeVisible();
+});
+
+test('поиск в справочнике выбирает группу по Enter', async ({ page }) => {
+  await page.goto('/?onboarding=1');
+  await expect(page.getByRole('button', { name: 'БП2-113', exact: true })).toBeVisible();
+  const search = page.getByRole('searchbox');
+  await search.fill('БП2-113');
+  await search.press('Enter');
+  await expect(page.locator('.chip', { hasText: 'БП2-113' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Показать расписание' })).toBeEnabled();
+});
+
 test('первый запуск выбирает колледж и группу', async ({ page }) => {
   await page.goto('/?onboarding=1');
   await expect(page.getByRole('heading', { name: 'Ваше расписание всегда под рукой' })).toBeVisible();

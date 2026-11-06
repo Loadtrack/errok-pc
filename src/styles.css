@@ -900,6 +900,12 @@ h2,
   padding: 30px;
 }
 
+.catalog-empty .btn {
+  display: flex;
+  width: fit-content;
+  margin: 14px auto 0;
+}
+
 .setup-footer {
   display: flex;
   align-items: center;

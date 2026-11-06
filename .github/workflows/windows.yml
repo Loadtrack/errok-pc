@@ -28,6 +28,9 @@ jobs:
       - name: Проверить TypeScript и интерфейс
         run: npm run build
 
+      - name: Проверить окно в браузере
+        run: npm run test:ui
+
       - name: Проверить ядро Rust на реальных примерах
         run: cargo test --manifest-path src-tauri/Cargo.toml
 

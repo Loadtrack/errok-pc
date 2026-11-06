@@ -247,6 +247,7 @@ pub struct LessonKey {
     pub group: String,
     pub pair: u8,
     pub pg: u8,
+    pub extra: bool,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -269,6 +270,7 @@ pub struct LessonChange {
     pub kind: ChangeKind,
     pub fields: Vec<FieldChange>,
     pub discipline: String,
+    pub extra: bool,
 }
 
 fn flatten(view: &DayView) -> BTreeMap<LessonKey, Subgroup> {
@@ -277,7 +279,12 @@ fn flatten(view: &DayView) -> BTreeMap<LessonKey, Subgroup> {
         for lesson in &group.lessons {
             for subgroup in &lesson.subgroups {
                 result.insert(
-                    LessonKey { group: group.name.clone(), pair: lesson.pair, pg: subgroup.pg },
+                    LessonKey {
+                        group: group.name.clone(),
+                        pair: lesson.pair,
+                        pg: subgroup.pg,
+                        extra: subgroup.extra,
+                    },
                     subgroup.clone(),
                 );
             }
@@ -297,6 +304,7 @@ pub fn diff_days(before: &DayView, after: &DayView) -> Vec<LessonChange> {
                 kind: ChangeKind::Removed,
                 fields: vec![],
                 discipline: previous.discipline.clone(),
+                extra: previous.extra,
             }),
             Some(current) => {
                 let mut fields = vec![];
@@ -319,6 +327,7 @@ pub fn diff_days(before: &DayView, after: &DayView) -> Vec<LessonChange> {
                         kind: ChangeKind::Modified,
                         fields,
                         discipline: current.discipline.clone(),
+                        extra: current.extra,
                     });
                 }
             }
@@ -331,6 +340,7 @@ pub fn diff_days(before: &DayView, after: &DayView) -> Vec<LessonChange> {
                 kind: ChangeKind::Added,
                 fields: vec![],
                 discipline: current.discipline.clone(),
+                extra: current.extra,
             });
         }
     }
@@ -354,7 +364,9 @@ pub fn new_day_notification(date: &str, view: &DayView, college: College) -> Opt
     let parsed = parse_date(date)?;
     let mut lines = vec![];
     for group in &view.groups {
-        if group.lessons.is_empty() {
+        if group.hidden {
+            lines.push(format!("{}: занятий нет", group.name));
+        } else if group.lessons.is_empty() {
             lines.push(format!("{}: пар нет", group.name));
         } else {
             let first = group.lessons.iter().map(|lesson| lesson.pair).min().unwrap_or(1);
@@ -378,9 +390,14 @@ pub fn changes_notification(date: &str, changes: &[LessonChange]) -> Option<Noti
     }
     let parsed = parse_date(date)?;
     let lines = changes.iter().map(|change| {
-        let prefix = format!("{}, {} пара", change.key.group, change.key.pair);
+        let mut prefix = format!("{}, {} пара", change.key.group, change.key.pair);
+        if change.key.pg > 0 {
+            prefix.push_str(&format!(", {} подгр.", change.key.pg));
+        }
         match change.kind {
+            ChangeKind::Added if change.extra => format!("{prefix}: добавлена доп. пара, {}", change.discipline),
             ChangeKind::Added => format!("{prefix}: добавлена, {}", change.discipline),
+            ChangeKind::Removed if change.extra => format!("{prefix}: снята доп. пара, {}", change.discipline),
             ChangeKind::Removed => format!("{prefix}: снята, {}", change.discipline),
             ChangeKind::Modified => {
                 let details = change.fields.iter().map(|field| {
@@ -505,6 +522,28 @@ mod tests {
         let changes = diff_days(&before, &after);
         assert!(changes.iter().any(|change| change.kind == ChangeKind::Removed));
         assert!(changes.iter().any(|change| change.fields.iter().any(|field| field.field == "аудитория" && field.after == "548")));
+    }
+
+    #[test]
+    fn extra_lesson_on_occupied_pair_is_a_separate_change() {
+        let day = sample_day();
+        let before = project_day(&day, &["БП2-113".into()], &[]);
+        let mut changed = day.clone();
+        changed.ov.extra.insert("БП2-113".into(), BTreeMap::from([("4".into(), ExtraLesson {
+            discipline: "Консультация".into(),
+            teacher: "Рудакова О.И.".into(),
+            room: "547".into(),
+            ts: None,
+        })]));
+        let after = project_day(&changed, &["БП2-113".into()], &[]);
+        let changes = diff_days(&before, &after);
+        let added = changes
+            .iter()
+            .find(|change| change.kind == ChangeKind::Added)
+            .expect("доп. пара должна считаться добавленной");
+        assert!(added.extra);
+        assert_eq!(added.key.pair, 4);
+        assert!(!changes.iter().any(|change| change.kind == ChangeKind::Removed));
     }
 
     #[test]

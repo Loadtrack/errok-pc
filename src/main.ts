@@ -16,7 +16,7 @@ import './styles.css';
 import { listen } from '@tauri-apps/api/event';
 import { isPermissionGranted, onAction, requestPermission, sendNotification } from '@tauri-apps/plugin-notification';
 import { backend, isDesktop } from './bridge';
-import { dayRelation, formatUpdated, fullDate, lessonTimes, today, weekdayShort } from './dates';
+import { dayRelation, formatRetry, formatUpdated, fullDate, lessonTimes, today, weekdayShort } from './dates';
 import type { AppSnapshot, Catalog, College, DayView, GroupView, LessonView, NotificationEvent, Settings, Theme } from './types';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
@@ -29,7 +29,51 @@ let refreshBusy = false;
 let toastTimer: ReturnType<typeof setTimeout>;
 let eventsInitialized = false;
 let settingsSaved = false;
+let lastUpdatedKey: string | null = null;
+let pendingDate: string | null = null;
+let notificationErrorShown = false;
 const notificationDates = new Map<number, string>();
+const NOTIFICATION_DATES_KEY = 'errok.notification-dates';
+const NOTIFICATION_ASKED_KEY = 'errok.notification-asked';
+
+function loadNotificationDates(): void {
+  try {
+    const stored = JSON.parse(localStorage.getItem(NOTIFICATION_DATES_KEY) ?? '{}') as Record<string, unknown>;
+    for (const [id, date] of Object.entries(stored)) {
+      const numeric = Number(id);
+      if (Number.isInteger(numeric) && typeof date === 'string' && /^\d{2}\.\d{2}\.\d{4}$/.test(date)) {
+        notificationDates.set(numeric, date);
+      }
+    }
+  } catch {
+    // Хранилище недоступно: уведомления всё равно работают в текущем сеансе.
+  }
+}
+
+function rememberNotification(id: number, date: string): void {
+  notificationDates.set(id, date);
+  try {
+    localStorage.setItem(NOTIFICATION_DATES_KEY, JSON.stringify(Object.fromEntries(notificationDates)));
+  } catch {
+    // Если записать не удалось, нажатие сработает до перезапуска программы.
+  }
+}
+
+function notificationsWereAsked(): boolean {
+  try {
+    return localStorage.getItem(NOTIFICATION_ASKED_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+
+function markNotificationsAsked(): void {
+  try {
+    localStorage.setItem(NOTIFICATION_ASKED_KEY, '1');
+  } catch {
+    // Ничего страшного: спросим разрешение при следующем запуске.
+  }
+}
 
 const iconPaths = {
   settings: '<circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.56V21h-4v-.09A1.7 1.7 0 0 0 9 19.36a1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.63 15 1.7 1.7 0 0 0 3.09 14H3v-4h.09A1.7 1.7 0 0 0 4.64 9a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.63 1.7 1.7 0 0 0 10 3.09V3h4v.09A1.7 1.7 0 0 0 15 4.64a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.37 9c.15.61.72 1 1.33 1H21v4h-.3c-.61 0-1.16.39-1.31 1Z"></path>',
@@ -107,7 +151,7 @@ function renderShell(): void {
             <button class="btn btn-icon" id="settings-button" title="Настройки" aria-label="Настройки">${icon('settings')}</button>
           </div>
         </header>
-        <div id="message-slot"></div>
+        <div id="message-slot" aria-live="polite"></div>
         <section class="day-heading">
           <div><h1 id="day-title"></h1><p id="day-subtitle"></p></div>
           <button class="btn" id="site-button">${icon('external')}<span>Открыть на сайте</span></button>
@@ -125,13 +169,17 @@ function renderShell(): void {
     void backend.openOnSite(selectedDate).catch((error) => toast(String(error)));
   });
   document.querySelector('#close-settings')!.addEventListener('click', () => closeSettings());
-  document.querySelector<HTMLDialogElement>('#settings-dialog')!.addEventListener('close', () => {
+  const dialog = document.querySelector<HTMLDialogElement>('#settings-dialog')!;
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) closeSettings();
+  });
+  dialog.addEventListener('close', () => {
     if (!settingsSaved && snapshot) applyTheme(snapshot.settings.theme);
   });
   renderChrome();
 }
 
-function renderChrome(): void {
+function renderChrome(updateDays = true): void {
   if (!snapshot || !document.querySelector('#day-nav')) return;
   const favorites = [...snapshot.settings.groups, ...snapshot.settings.teachers];
   const visible = favorites.slice(0, 3).join(' · ');
@@ -142,10 +190,11 @@ function renderChrome(): void {
   const connection = document.querySelector('#connection')!;
   connection.textContent = snapshot.message ? 'Нет соединения' : 'Данные с errok.ru';
   connection.classList.toggle('offline', Boolean(snapshot.message));
+  const retry = formatRetry(snapshot.retry_at);
   document.querySelector('#message-slot')!.innerHTML = snapshot.message
-    ? `<div class="notice-bar">${escapeHtml(snapshot.message)}. Показываем последнее сохранённое расписание.</div>`
+    ? `<div class="notice-bar">${escapeHtml(snapshot.message)}. Показываем последнее сохранённое расписание.${retry ? ` ${escapeHtml(retry)}.` : ''}</div>`
     : '';
-  renderDays();
+  if (updateDays) renderDays();
 }
 
 function renderDays(): void {
@@ -175,7 +224,7 @@ function renderHomework(lesson: LessonView): string {
 
 function renderLesson(lesson: LessonView): string {
   if (!snapshot) return '';
-  const [start, end] = lessonTimes(snapshot.settings.college, selectedDate, lesson.pair);
+  const [start, end] = lessonTimes(snapshot.settings.college, currentDay?.date ?? selectedDate, lesson.pair);
   const subgroups = lesson.subgroups.map((subgroup) => `
     <div class="subgroup">
       <div>
@@ -200,7 +249,7 @@ function renderLesson(lesson: LessonView): string {
 function renderGroup(group: GroupView): string {
   return `
     <section class="group-section">
-      <div class="group-header"><h2>${escapeHtml(group.name)}</h2>${group.status ? `<span class="status-pill">${escapeHtml(group.status)}</span>` : ''}</div>
+      <div class="group-header"><h2>${escapeHtml(group.name)}</h2>${group.status && !group.hidden ? `<span class="status-pill">${escapeHtml(group.status)}</span>` : ''}</div>
       ${group.hidden
         ? '<div class="empty-state"><h2>Занятий нет</h2></div>'
         : group.lessons.length
@@ -211,6 +260,7 @@ function renderGroup(group: GroupView): string {
 
 function renderDay(): void {
   if (!snapshot) return;
+  document.title = `${fullDate(selectedDate)} · errok для ПК`;
   document.querySelector('#day-title')!.textContent = fullDate(selectedDate);
   const available = snapshot.days.find((day) => day.date === selectedDate)?.available ?? false;
   document.querySelector('#day-subtitle')!.textContent = currentDay
@@ -241,6 +291,7 @@ async function selectDate(date: string): Promise<void> {
   selectedDate = date;
   currentDay = null;
   const request = ++dayRequest;
+  document.title = `${fullDate(date)} · errok для ПК`;
   renderDays();
   if (snapshot) document.querySelector('#day-title')!.textContent = fullDate(date);
   document.querySelector('#day-subtitle')!.textContent = '';
@@ -271,6 +322,7 @@ async function refreshSchedule(): Promise<void> {
   button!.disabled = true;
   try {
     snapshot = await backend.refreshNow();
+    lastUpdatedKey = snapshot.last_updated;
     renderChrome();
     currentDay = await backend.getCachedDay(selectedDate);
     renderDay();
@@ -283,7 +335,7 @@ async function refreshSchedule(): Promise<void> {
   }
 }
 
-function setupPicker(root: HTMLElement, draft: Settings, catalog: Catalog | null): void {
+function setupPicker(root: HTMLElement, draft: Settings, catalog: Catalog | null, onChange?: () => void): void {
   let kind: 'groups' | 'teachers' = 'groups';
   let query = '';
   root.innerHTML = `
@@ -317,6 +369,11 @@ function setupPicker(root: HTMLElement, draft: Settings, catalog: Catalog | null
       : '<div class="catalog-empty">Ничего не найдено</div>';
   };
   input.addEventListener('input', () => { query = input.value; renderList(); });
+  input.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter') return;
+    event.preventDefault();
+    list.querySelector<HTMLButtonElement>('.catalog-item:not(.selected)')?.click();
+  });
   root.onclick = (event) => {
     const button = (event.target as HTMLElement).closest<HTMLButtonElement>('button');
     if (!button) return;
@@ -333,6 +390,7 @@ function setupPicker(root: HTMLElement, draft: Settings, catalog: Catalog | null
       draft[targetKind] = target.filter((value) => value !== button.dataset.value);
       renderChips();
       renderList();
+      onChange?.();
       return;
     }
     if (button.classList.contains('catalog-item')) {
@@ -349,6 +407,7 @@ function setupPicker(root: HTMLElement, draft: Settings, catalog: Catalog | null
       }
       renderChips();
       renderList();
+      onChange?.();
     }
   };
   renderChips();
@@ -374,31 +433,39 @@ function showOnboarding(): void {
     <div class="setup-footer"><p>Данные хранятся только на этом компьютере.<br>Настройки можно изменить позже.</p><button class="btn btn-primary btn-large" id="finish-setup" disabled>Показать расписание</button></div>
   </div></div>`;
   const picker = document.querySelector<HTMLElement>('#onboarding-picker')!;
-  setupPicker(picker, draft, catalog);
   const finish = document.querySelector<HTMLButtonElement>('#finish-setup')!;
   const updateFinish = () => { finish.disabled = !draft.groups.length && !draft.teachers.length; };
-  picker.addEventListener('click', updateFinish);
+  let catalogRequest = 0;
   const loadCatalog = async () => {
+    const request = ++catalogRequest;
     catalog = null;
+    setupPicker(picker, draft, catalog, updateFinish);
+    updateFinish();
     try {
       const loaded = await backend.fetchCatalog(draft.college);
+      if (request !== catalogRequest) return;
       catalog = loaded;
-      setupPicker(picker, draft, catalog);
-      picker.addEventListener('click', updateFinish);
+      setupPicker(picker, draft, catalog, updateFinish);
+      updateFinish();
     } catch (error) {
-      picker.innerHTML = `<div class="catalog-empty">Не удалось загрузить справочник. Проверьте интернет.</div>`;
+      if (request !== catalogRequest) return;
+      const list = picker.querySelector<HTMLElement>('.catalog-list');
+      if (list) {
+        list.innerHTML = '<div class="catalog-empty">Не удалось загрузить справочник. Проверьте интернет.<button class="btn" data-retry-catalog>Повторить</button></div>';
+        list.querySelector('[data-retry-catalog]')?.addEventListener('click', () => void loadCatalog(), { once: true });
+      }
       toast(String(error));
     }
   };
   document.querySelector('#onboarding-college')!.addEventListener('click', (event) => {
     const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-college]');
     if (!button) return;
-    draft.college = button.dataset.college as College;
+    const college = button.dataset.college as College;
+    if (college === draft.college) return;
+    draft.college = college;
     draft.groups = [];
     draft.teachers = [];
     document.querySelector('#onboarding-college')!.innerHTML = collegeCards(draft);
-    setupPicker(picker, draft, null);
-    picker.addEventListener('click', updateFinish);
     updateFinish();
     void loadCatalog();
   });
@@ -408,8 +475,9 @@ function showOnboarding(): void {
     try {
       draft.onboarded = true;
       snapshot = await backend.saveSettings(structuredClone(draft));
+      lastUpdatedKey = snapshot.last_updated;
       applyTheme(snapshot.settings.theme);
-      await ensureNotificationPermission();
+      await ensureNotificationPermission(true);
       showMain();
     } catch (error) {
       toast(String(error));
@@ -430,6 +498,8 @@ function openSettings(): void {
   settingsSaved = false;
   const draft = structuredClone(snapshot.settings);
   let catalog: Catalog | null = null;
+  let catalogError = false;
+  let catalogRequest = 0;
   const dialog = document.querySelector<HTMLDialogElement>('#settings-dialog')!;
   const content = document.querySelector<HTMLElement>('#settings-content')!;
 
@@ -443,13 +513,27 @@ function openSettings(): void {
       <div class="settings-row"><div><strong>Запускать вместе с Windows</strong><small>Сворачивание в трей продолжит работу в фоне</small></div><label class="switch"><input id="autostart-input" type="checkbox" ${draft.autostart ? 'checked' : ''}><span class="switch-slider"></span></label></div>
       <div class="dialog-footer"><button class="btn" id="cancel-settings">Отмена</button><button class="btn btn-primary" id="save-settings">Сохранить</button></div>`;
     setupPicker(content.querySelector<HTMLElement>('#settings-picker')!, draft, catalog);
+    if (catalogError && !catalog) {
+      const list = content.querySelector<HTMLElement>('.catalog-list');
+      if (list) {
+        list.innerHTML = '<div class="catalog-empty">Не удалось загрузить справочник. Проверьте интернет.<button class="btn" data-retry-catalog>Повторить</button></div>';
+        list.querySelector('[data-retry-catalog]')?.addEventListener('click', () => {
+          catalogError = false;
+          render();
+          void loadCatalog();
+        });
+      }
+    }
     content.querySelector('#settings-college')!.addEventListener('click', (event) => {
       const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-college]');
       if (!button) return;
-      draft.college = button.dataset.college as College;
+      const college = button.dataset.college as College;
+      if (college === draft.college) return;
+      draft.college = college;
       draft.groups = [];
       draft.teachers = [];
       catalog = null;
+      catalogError = false;
       render();
       void loadCatalog();
     });
@@ -488,11 +572,18 @@ function openSettings(): void {
   };
 
   const loadCatalog = async () => {
+    const request = ++catalogRequest;
     try {
-      catalog = await backend.fetchCatalog(draft.college);
+      const loaded = await backend.fetchCatalog(draft.college);
+      if (request !== catalogRequest) return;
+      catalog = loaded;
+      catalogError = false;
       if (dialog.open) render();
     } catch (error) {
+      if (request !== catalogRequest) return;
+      catalogError = true;
       toast(String(error));
+      if (dialog.open) render();
     }
   };
   render();
@@ -503,7 +594,17 @@ function openSettings(): void {
 function showMain(): void {
   if (!snapshot) return;
   renderShell();
-  void selectDate(defaultDate(snapshot));
+  const initial = pendingDate ?? defaultDate(snapshot);
+  pendingDate = null;
+  void selectDate(initial);
+}
+
+async function reloadCachedDay(): Promise<void> {
+  const request = dayRequest;
+  const cached = await backend.getCachedDay(selectedDate).catch(() => null);
+  if (request !== dayRequest || !cached) return;
+  currentDay = cached;
+  renderDay();
 }
 
 function notificationId(date: string): number {
@@ -512,11 +613,18 @@ function notificationId(date: string): number {
   return hash;
 }
 
-async function ensureNotificationPermission(): Promise<void> {
+async function ensureNotificationPermission(force = false): Promise<void> {
   if (!isDesktop) return;
   try {
-    if (!(await isPermissionGranted())) await requestPermission();
+    if (await isPermissionGranted()) return;
+    if (!force && notificationsWereAsked()) return;
+    const permission = await requestPermission();
+    markNotificationsAsked();
+    if (permission !== 'granted') {
+      toast('Windows не разрешила уведомления. Их можно включить в настройках системы.');
+    }
   } catch {
+    markNotificationsAsked();
     toast('Windows не разрешила уведомления. Их можно включить в настройках системы.');
   }
 }
@@ -525,14 +633,45 @@ async function initializeEvents(): Promise<void> {
   if (!isDesktop || eventsInitialized) return;
   eventsInitialized = true;
   await listen<AppSnapshot>('state-changed', (event) => {
-    snapshot = event.payload;
-    renderChrome();
+    const previous = snapshot;
+    const next = event.payload;
+    const settingsChanged = !previous
+      || previous.settings.college !== next.settings.college
+      || previous.settings.theme !== next.settings.theme
+      || previous.settings.autostart !== next.settings.autostart
+      || previous.settings.onboarded !== next.settings.onboarded
+      || previous.settings.groups.join('\u0000') !== next.settings.groups.join('\u0000')
+      || previous.settings.teachers.join('\u0000') !== next.settings.teachers.join('\u0000');
+    const daysChanged = !previous
+      || previous.days.length !== next.days.length
+      || previous.days.some((day, index) => {
+        const update = next.days[index];
+        return day.date !== update.date || day.available !== update.available;
+      });
+    const statusChanged = !previous
+      || previous.last_updated !== next.last_updated
+      || previous.message !== next.message
+      || previous.retry_at !== next.retry_at;
+    snapshot = next;
+    if (!settingsChanged && !daysChanged && !statusChanged) return;
+    renderChrome(daysChanged || settingsChanged);
+    if (next.settings.onboarded && next.last_updated !== lastUpdatedKey) {
+      lastUpdatedKey = next.last_updated;
+      void reloadCachedDay();
+    }
   });
   await listen<NotificationEvent[]>('schedule-notifications', (event) => {
     for (const notification of event.payload) {
       const id = notificationId(notification.date);
-      notificationDates.set(id, notification.date);
-      sendNotification({ id, title: notification.title, body: notification.body });
+      rememberNotification(id, notification.date);
+      try {
+        sendNotification({ id, title: notification.title, body: notification.body });
+      } catch {
+        if (!notificationErrorShown) {
+          notificationErrorShown = true;
+          toast('Windows не показала уведомление. Проверьте разрешения в настройках системы.');
+        }
+      }
     }
   });
   await onAction((event) => {
@@ -540,18 +679,42 @@ async function initializeEvents(): Promise<void> {
     if (id === undefined) return;
     const date = notificationDates.get(id);
     if (!date) return;
+    pendingDate = date;
     void backend.revealWindow();
-    if (snapshot?.settings.onboarded) void selectDate(date);
+    if (snapshot?.settings.onboarded && document.querySelector('#day-title')) {
+      pendingDate = null;
+      void selectDate(date);
+    }
   });
 }
 
+document.addEventListener('keydown', (event) => {
+  if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return;
+  if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+  if (!snapshot || document.querySelector('dialog[open]')) return;
+  const target = event.target;
+  if (target instanceof Element && target.closest('input, textarea, select, [contenteditable="true"]')) return;
+  const index = snapshot.days.findIndex((day) => day.date === selectedDate);
+  if (index < 0) return;
+  const next = snapshot.days[index + (event.key === 'ArrowLeft' ? -1 : 1)];
+  if (!next) return;
+  event.preventDefault();
+  void selectDate(next.date);
+});
+
 async function boot(): Promise<void> {
   try {
+    loadNotificationDates();
     snapshot = await backend.getSnapshot();
+    lastUpdatedKey = snapshot.last_updated;
     applyTheme(snapshot.settings.theme);
     await initializeEvents();
-    if (snapshot.settings.onboarded) showMain();
-    else showOnboarding();
+    if (snapshot.settings.onboarded) {
+      await ensureNotificationPermission();
+      showMain();
+    } else {
+      showOnboarding();
+    }
   } catch (error) {
     app.innerHTML = `<div class="boot-screen">${brand()}<span class="muted">Не удалось открыть данные приложения</span><button class="btn btn-primary" id="retry-boot">Попробовать снова</button></div>`;
     document.querySelector('#retry-boot')!.addEventListener('click', () => void boot());

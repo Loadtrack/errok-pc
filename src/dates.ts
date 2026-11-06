@@ -49,7 +49,43 @@ export function lessonTimes(college: College, date: string, pair: number): [stri
   return table[pair - 1] ?? ['', ''];
 }
 
+function isSameDay(left: Date, right: Date): boolean {
+  return left.getFullYear() === right.getFullYear()
+    && left.getMonth() === right.getMonth()
+    && left.getDate() === right.getDate();
+}
+
+function shortTime(value: Date): string {
+  return value.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
+}
+
 export function formatUpdated(value: string | null): string {
   if (!value) return 'Ещё не обновлялось';
-  return `Обновлено ${new Date(value).toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })}`;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return 'Ещё не обновлялось';
+  const current = new Date();
+  const time = shortTime(date);
+  if (isSameDay(date, current)) return `Обновлено в ${time}`;
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  if (isSameDay(date, yesterday)) return `Обновлено вчера в ${time}`;
+  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  if (date.getFullYear() !== current.getFullYear()) {
+    return `Обновлено ${day}.${month}.${date.getFullYear()} в ${time}`;
+  }
+  return `Обновлено ${day}.${month} в ${time}`;
+}
+
+export function formatRetry(value: string | null): string | null {
+  if (!value) return null;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return null;
+  const current = new Date();
+  const time = shortTime(date);
+  if (isSameDay(date, current)) return `Повторим в ${time}`;
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  if (isSameDay(date, tomorrow)) return `Повторим завтра в ${time}`;
+  return `Повторим ${formatDate(date)} в ${time}`;
 }
